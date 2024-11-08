@@ -1,28 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate untuk melakukan redirect
+import { useNavigate } from 'react-router-dom'; 
 import './ConfirmationPage.css';
 
 const ConfirmationPage = () => {
     const formData = useSelector((state) => state.form.formData); // Ambil data form dari Redux
     const [animationCompleted, setAnimationCompleted] = useState(false);
-    const navigate = useNavigate(); // Hook untuk navigasi
+    const navigate = useNavigate(); 
 
     useEffect(() => {
-        // Cek jika formData kosong (misalnya setelah refresh atau akses langsung)
+        
         if (!formData || Object.keys(formData).length === 0) {
-            // Redirect ke halaman utama (Home)
+        
             navigate('/');
         } else {
-            // Simulasi animasi selesai setelah beberapa detik
+            
             const timer = setTimeout(() => {
                 setAnimationCompleted(true);
-            }, 2000); // Durasi animasi centang
+            }, 2000); 
 
             return () => clearTimeout(timer);
         }
-    }, [formData, navigate]); // Dependensi agar effect dijalankan ulang saat formData berubah
-
+    }, [formData, navigate]);
     return (
         <div className="confirmation-container">
             <div className={`confirmation-message ${animationCompleted ? 'show' : ''}`}>
@@ -35,7 +34,6 @@ const ConfirmationPage = () => {
                 <h2>Thank You for Registering!</h2>
                 <p>Your registration was successful. We look forward to seeing you at the event.</p>
 
-                {/* Menampilkan data pengguna dalam tabel */}
                 <div className="user-details">
                     <h3>Your Details:</h3>
                     <table>
