@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate untuk navigasi
+import { useNavigate } from 'react-router-dom'; 
 import './Home.css';
 import seminarImg1 from '../assets/seminar2.jpg';
 import seminarImg2 from '../assets/seminar1.jpg';
@@ -59,7 +59,7 @@ function Home() {
   };
 
   const handleRegisterClick = () => {
-    // Navigasi ke halaman registrasi (misalnya /registration)
+    
     navigate('/register');
   };
 
@@ -72,7 +72,7 @@ function Home() {
         <EventCard 
           title="Event 1: React Basics" 
           description="This seminar will cover the basics of React.js for web development." 
-          onRegisterClick={handleRegisterClick} // Menghubungkan tombol "Learn More" ke handler
+          onRegisterClick={handleRegisterClick} 
         />
         <EventCard 
           title="Event 2: Advanced JavaScript" 
