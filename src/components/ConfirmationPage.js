@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './ConfirmationPage.css';
 
 const ConfirmationPage = () => {
-    const formData = useSelector((state) => state.form.formData); // Ambil data form dari Redux
+    const formData = useSelector((state) => state.form.formData); 
     const [animationCompleted, setAnimationCompleted] = useState(false);
     const navigate = useNavigate(); 
 
