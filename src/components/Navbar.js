@@ -43,7 +43,7 @@ const Navbar = () => {
                         <Link to="/event" onClick={() => setMenuOpen(false)}>About</Link>
                     </li>
                     <li>
-                        <Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link> {/* Link menuju halaman pendaftaran */}
+                        <Link to="/register" onClick={() => setMenuOpen(false)}>Register</Link> 
                     </li>
                 </ul>
             </div>
