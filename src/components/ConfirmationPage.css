@@ -1,4 +1,3 @@
-/* ConfirmationPage.css */
 .confirmation-container {
     display: flex;
     justify-content: center;
@@ -11,7 +10,6 @@
     box-sizing: border-box;
 }
 
-/* Konfirmasi pesan lainnya */
 .confirmation-message {
     background-color: #ffffff;
     padding: 2rem;
@@ -30,7 +28,6 @@
     transform: translateY(0);
 }
 
-/* Animasi centang */
 .checkmark {
     width: 60px;
     height: 60px;
@@ -63,9 +60,8 @@ p {
     color: #666;
 }
 
-/* Bagian Your Details */
 .user-details {
-    background-color: #fff9c4; /* Latar belakang kuning */
+    background-color: #fff9c4;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -75,7 +71,7 @@ p {
 .user-details h3 {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #001589; /* Warna lebih kontras */
+    color: #001589;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -101,7 +97,6 @@ p {
     background-color: #fff;
 }
 
-/* Animasi centang */
 @keyframes checkmark-animation {
     0% {
         transform: scale(0);
@@ -117,7 +112,6 @@ p {
     }
 }
 
-/* Responsivitas untuk perangkat lebih kecil (misalnya ponsel) */
 @media (max-width: 768px) {
     .confirmation-container {
         padding-top: 100px;
