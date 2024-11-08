@@ -1,3 +1,4 @@
+/* CSS Variables for easier theme management */
 :root {
     --primary-color: #007bff;
     --primary-color-hover: #0056b3;
@@ -12,12 +13,16 @@
     --btn-hover-color: #e6b800;
 }
 
+/* General Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Layout Styling */
+
+/* Header Image Styling */
 .header-image {
     width: 100vw;
     max-height: 400px;
@@ -28,6 +33,7 @@
     top: 70px;
 }
 
+/* Home Section */
 .home {
     text-align: center;
 }
@@ -48,6 +54,7 @@
     margin-bottom: 2rem;
 }
 
+/* Sticky Navigation */
 .navbar {
     position: sticky;
     top: 0;
@@ -70,6 +77,7 @@
     color: var(--primary-color-hover);
 }
 
+/* Events Section */
 .events-preview {
     display: flex;
     flex-wrap: wrap;
@@ -99,39 +107,44 @@
     background-color: var(--background-color);
 }
 
+/* Styling untuk h2 di dalam event-card */
 .event-card h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 1.5px;
-    margin-bottom: 1.5rem;
-    position: relative;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 2rem; /* Ukuran font yang lebih besar untuk menarik perhatian */
+    color: var(--primary-color); /* Warna utama dari variabel CSS */
+    font-weight: bold; /* Tebalkan font untuk kesan yang lebih tegas */
+    text-align: center; /* Membuat teks berada di tengah */
+    letter-spacing: 1.5px; /* Menambah jarak antar huruf agar lebih terbaca */
+    margin-bottom: 1.5rem; /* Menambahkan ruang bawah */
+    position: relative; /* Agar efek garis bawah bisa diatur */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transisi halus untuk perubahan warna dan efek transformasi */
 }
 
+/* Efek garis bawah animasi */
 .event-card h2::after {
     content: ''; 
     position: absolute;
-    bottom: -8px;
+    bottom: -8px; /* Menempatkan garis bawah sedikit lebih rendah dari teks */
     left: 0;
     width: 100%;
-    height: 3px;
-    background-color: var(--btn-color);
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-in-out;
+    height: 3px; /* Ukuran garis bawah */
+    background-color: var(--btn-color); /* Warna garis bawah menggunakan warna tombol */
+    transform: scaleX(0); /* Mulai dengan garis bawah yang tidak terlihat */
+    transform-origin: bottom right; /* Animasi dimulai dari kanan */
+    transition: transform 0.3s ease-in-out; /* Transisi halus untuk animasi */
 }
 
+/* Efek hover untuk animasi garis bawah */
 .event-card h2:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+    transform: scaleX(1); /* Membuat garis bawah terlihat saat hover */
+    transform-origin: bottom left; /* Animasi garis bawah dari kiri */
 }
 
+/* Efek hover untuk teks */
 .event-card h2:hover {
-    color: var(--btn-hover-color);
-    transform: translateY(-5px);
+    color: var(--btn-hover-color); /* Mengubah warna teks saat hover */
+    transform: translateY(-5px); /* Efek animasi teks naik sedikit */
 }
+
 
 .event-card p {
     font-size: 1rem;
@@ -156,6 +169,7 @@
     transform: translateY(-3px);
 }
 
+/* Gallery Section */
 .gallery {
     margin: 2rem 0;
     padding: 0 1rem;
@@ -196,9 +210,10 @@
     margin: auto;
     overflow: hidden;
     border-radius: inherit;
-    height: 500px;
+    height: 500px; /* Sesuaikan tinggi agar proporsional dengan poster */
 }
 
+/* Slide Container */
 .gallery-slide {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -219,6 +234,7 @@
     opacity: 1;
 }
 
+/* Slider Dots */
 .dots {
     display: flex;
     justify-content: center;
@@ -240,6 +256,7 @@
     background-color: var(--dot-active-color);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .home h1 {
         font-size: 2rem;

@@ -1,31 +1,34 @@
+/* Base Navbar Styles */
 .navbar {
   background-color: #120086;
   padding: 1rem;
-  position: fixed;
+  position: fixed; /* Navbar tetap di atas halaman */
   top: 0;
   left: 0;
   width: 100%;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  box-sizing: border-box;
+  z-index: 1000; /* Navbar di atas konten lain */
+  box-sizing: border-box; /* Menambahkan box-sizing agar padding dihitung dalam ukuran elemen */
 }
 
+/* Navbar Container */
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Jaga agar logo di kiri dan menu di kanan */
   align-items: center;
   width: 100%;
-  padding-right: 20px;
+  padding-right: 20px; /* Memberikan ruang lebih sedikit agar tidak terpotong */
 }
 
+/* Logo and Title Styling */
 .navbar-logo {
   display: flex;
   align-items: center;
-  flex: 1;
+  flex: 1; /* Logo mengambil ruang kiri */
 }
 
 .logo-img {
-  width: 50px;
+  width: 50px; /* Ukuran logo */
   height: auto;
   margin-right: 10px;
 }
@@ -36,13 +39,14 @@
   margin: 0;
 }
 
+/* Navbar Links */
 .navbar-links {
   list-style: none;
   display: flex;
   gap: 15px;
   transition: all 0.3s ease;
-  margin-left: auto;
-  padding-right: 20px;
+  margin-left: auto; /* Menu berada di kanan */
+  padding-right: 20px; /* Memberikan sedikit ruang kanan agar tidak terlalu dekat dengan tepi */
 }
 
 .navbar-links li {
@@ -58,7 +62,7 @@
 }
 
 .navbar-links a:hover {
-  color: #FFD700;
+  color: #FFD700; /* Warna kuning saat hover */
   transform: scale(1.1);
 }
 
@@ -67,7 +71,7 @@
   position: absolute;
   width: 0%;
   height: 2px;
-  background-color: #FFD700;
+  background-color: #FFD700; /* Efek garis kuning setelah hover */
   transition: width 0.3s ease;
   bottom: 0;
   left: 0;
@@ -77,6 +81,8 @@
   width: 100%;
 }
 
+
+/* Hamburger Menu Styles */
 .hamburger-menu {
   display: none;
   cursor: pointer;
@@ -95,25 +101,27 @@
   transition: all 0.3s ease;
 }
 
+/* Hover and Active Effects for Hamburger Icon */
 .hamburger-menu:hover .bar {
   transform: scale(1.1);
-  background-color: #87CEFA;
-  box-shadow: 0 0 10px #87CEFA;
+  background-color: #87CEFA; /* Efek glow biru muda */
+  box-shadow: 0 0 10px #87CEFA; /* Efek shadow biru */
 }
 
 .hamburger-menu.active .bar {
   background-color: #87CEFA;
   transform: scale(1.0);
-  box-shadow: 0 0 10px #87CEFA;
+  box-shadow: 0 0 10px #87CEFA; /* Efek glow saat aktif */
 }
 
+/* Mobile responsive styles */
 @media (max-width: 768px) {
   .navbar-links {
       display: none;
       flex-direction: column;
       position: absolute;
       top: 70px;
-      right: 20px;
+      right: 20px; /* Memberikan sedikit ruang di kanan agar tidak terlalu menempel */
       background-color: #04007e;
       width: 200px;
       padding: 1rem;
@@ -135,6 +143,7 @@
   }
 }
 
+/* Animation for Mobile Menu Slide-in */
 @keyframes slideIn {
   from {
       transform: translateX(100%);

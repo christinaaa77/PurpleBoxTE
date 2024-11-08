@@ -1,5 +1,6 @@
+/* General Styling for About Page */
 .about-page {
-  margin-top: 100px;
+  margin-top: 100px; /* Memberikan ruang lebih besar agar konten tidak terpotong */
   padding: 4rem 2rem 2rem;
   text-align: center;
   background-color: #f9f9f9;
@@ -7,6 +8,8 @@
   min-height: 100vh;
 }
 
+
+/* About Page Header */
 .about-page h1 {
   font-size: 3rem;
   color: #120086;
@@ -21,12 +24,12 @@
   color: #FFD700;
   transform: scale(1.05);
 }
-
 .about-page h2:hover {
   color: #FFD700;
   transform: scale(1.05);
 }
 
+/* General Text Styling for About Page */
 .about-page p {
   font-size: 1.15rem;
   color: #555;
@@ -41,6 +44,7 @@
   color: #333;
 }
 
+/* About Section Styling */
 .about-section {
   background-color: #fff;
   border-radius: 12px;
@@ -54,11 +58,13 @@
   transition: all 0.3s ease;
 }
 
+/* Hover Effect for About Section */
 .about-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* About Section Header */
 .about-section h2 {
   font-size: 2rem;
   color: #120086;
@@ -66,6 +72,7 @@
   font-weight: 500;
 }
 
+/* About Section Paragraphs */
 .about-section p {
   font-size: 1.1rem;
   color: #666;
@@ -73,6 +80,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Button Styling */
 .about-page .cta-btn {
   background-color: #120086;
   color: white;
@@ -92,6 +100,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .about-page h1 {
     font-size: 2.2rem;
@@ -117,6 +126,7 @@
   }
 }
 
+/* Extra Small Screens */
 @media (max-width: 576px) {
   .about-page h1 {
     font-size: 1.8rem;
