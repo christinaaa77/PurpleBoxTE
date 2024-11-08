@@ -1,0 +1,149 @@
+.confirmation-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.confirmation-message {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.confirmation-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.checkmark {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4caf50;
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 20px;
+    opacity: 0;
+}
+
+.checkmark.animate {
+    opacity: 1;
+    animation: checkmark-animation 1s ease forwards;
+}
+
+.checkmark svg {
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.user-details {
+    background-color: #fff9c4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.user-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #001589;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.user-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-details th, .user-details td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-details th {
+    background-color: #ffc107;
+    color: white;
+    font-weight: bold;
+}
+
+.user-details td {
+    background-color: #fff;
+}
+
+@keyframes checkmark-animation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .confirmation-container {
+        padding-top: 100px;
+    }
+    
+    .confirmation-message {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .user-details {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .user-details h3 {
+        font-size: 1.3rem;
+    }
+
+    .user-details table {
+        font-size: 0.9rem;
+    }
+
+    .user-details th,
+    .user-details td {
+        padding: 8px;
+    }
+}

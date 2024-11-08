@@ -1,0 +1,145 @@
+.navbar {
+  background-color: #120086;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-right: 20px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.logo-img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.navbar-title {
+  color: white;
+  font-size: 24px;
+  margin: 0;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  padding-right: 20px;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: color 0.3s, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #FFD700;
+  transform: scale(1.1);
+}
+
+.navbar-links a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar-links a:hover:after {
+  width: 100%;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu .bar {
+  height: 4px;
+  width: 100%;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu:hover .bar {
+  transform: scale(1.1);
+  background-color: #87CEFA;
+  box-shadow: 0 0 10px #87CEFA;
+}
+
+.hamburger-menu.active .bar {
+  background-color: #87CEFA;
+  transform: scale(1.0);
+  box-shadow: 0 0 10px #87CEFA;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      background-color: #04007e;
+      width: 200px;
+      padding: 1rem;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+  }
+
+  .navbar-links.active {
+      display: flex;
+      animation: slideIn 0.3s ease-out;
+  }
+
+  .navbar-links li {
+      margin: 1rem 0;
+  }
+
+  .hamburger-menu {
+      display: flex;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
